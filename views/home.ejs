@@ -1,0 +1,19 @@
+
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% contentArr.forEach(function(content){   %>
+  <h1><%= content.postTitle %></h1>
+  <p><%= content.postBody.substring(0,100) %>...</p>
+  <a href= "/posts/<%= content.postTitle %>" >
+    Read More...
+  </a>
+<% }) %>
+
+<form action="/newpost" method="post">
+  <button class="btn btn-primary" type="submit" name="button">New Post</button>
+</form>
+
+<%- include("partials/footer") -%>
