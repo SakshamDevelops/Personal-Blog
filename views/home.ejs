@@ -6,7 +6,7 @@
 
 <% contentArr.forEach(function(post){   %>
   <h1><%= post.title %></h1>
-  <p><%= post.content %>...</p>
+  <p><%= post.content.slice(0,300) %>...</p>
   <a href= "/posts/<%= post._id %>" >
     Read More...
   </a>
